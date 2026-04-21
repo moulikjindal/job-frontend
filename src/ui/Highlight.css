@@ -1,0 +1,10 @@
+.ui-highlight {
+  background: rgba(245,158,11,0.25);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 600;
+}
+[data-theme="dark"] .ui-highlight {
+  background: rgba(245,158,11,0.35);
+}

@@ -1,0 +1,19 @@
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 20px;
+  background: var(--primary);
+  color: #fff !important;
+  font-weight: 700;
+  border-radius: 0 0 12px 12px;
+  font-size: 0.9rem;
+  z-index: 200;
+  transition: top 0.15s ease;
+  outline-offset: 3px;
+}
+.skip-to-content:focus-visible {
+  top: 0;
+  outline: 2px solid var(--accent);
+}

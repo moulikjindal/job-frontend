@@ -1,0 +1,259 @@
+.my-jobs {
+  min-height: 100vh;
+  padding: 48px 24px;
+  background: var(--surface-2);
+}
+.my-jobs .mj-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.mj-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.mj-new-btn {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff !important;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(79,70,229,0.35);
+  transition: all var(--transition);
+}
+.mj-new-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 22px rgba(79,70,229,0.5); }
+
+.mj-toolbar {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: var(--surface);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  align-items: center;
+}
+.mj-search {
+  flex: 1;
+  min-width: 240px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+}
+.mj-search input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  outline: none;
+  font-family: inherit;
+  font-size: 0.92rem;
+}
+.mj-search input::placeholder { color: var(--text-secondary); }
+
+.mj-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.mj-tab {
+  padding: 8px 14px;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition);
+}
+.mj-tab:hover { color: var(--primary); border-color: var(--primary); }
+.mj-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.mj-tab-count {
+  font-size: 0.72rem;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+}
+.mj-tab:not(.active) .mj-tab-count { background: var(--surface); }
+
+.my-jobs .mj-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.my-jobs .mj-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all var(--transition);
+}
+.my-jobs .mj-card:hover { box-shadow: var(--shadow-md); }
+.my-jobs .mj-card--featured { border-color: rgba(245,158,11,0.45); }
+.mj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.mj-title-link {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  transition: color var(--transition);
+}
+.mj-title-link:hover { color: var(--primary); }
+.mj-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.mj-top-actions { display: flex; gap: 8px; flex-shrink: 0; flex-wrap: wrap; }
+.mj-icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.mj-icon-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.mj-toggles {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--surface-2);
+  border-radius: var(--radius-md);
+}
+
+.my-jobs .mj-card .mj-fields {
+  display: flex;
+  gap: 24px;
+}
+.my-jobs .mj-card .mj-short {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.my-jobs .mj-card .mj-long {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.my-jobs .mj-card .mj-field-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+.my-jobs .mj-card input,
+.my-jobs .mj-card select,
+.my-jobs .mj-card textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition);
+  width: 100%;
+}
+.mj-range { display: flex; gap: 8px; }
+.my-jobs .mj-card select option {
+  background: var(--surface);
+  color: var(--text-primary);
+}
+[data-theme="dark"] .my-jobs .mj-card select {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+[data-theme="dark"] .my-jobs .mj-card select option {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+.my-jobs .mj-card input:enabled,
+.my-jobs .mj-card select:enabled,
+.my-jobs .mj-card textarea:enabled {
+  border-color: var(--primary-light);
+  background: var(--surface);
+}
+.my-jobs .mj-card input:focus,
+.my-jobs .mj-card select:focus,
+.my-jobs .mj-card textarea:focus {
+  box-shadow: 0 0 0 4px rgba(79,70,229,0.1);
+}
+.my-jobs .mj-card input:disabled,
+.my-jobs .mj-card select:disabled,
+.my-jobs .mj-card textarea:disabled {
+  color: var(--text-primary);
+  opacity: 0.85;
+}
+.my-jobs .mj-card textarea { min-height: 80px; resize: vertical; }
+
+.mj-footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+.mj-posted { display: inline-flex; align-items: center; gap: 6px; }
+
+.mj-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 0;
+}
+.mj-loading .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.mj-loading p { color: var(--text-secondary); font-size: 0.95rem; }
+
+@media (max-width: 900px) {
+  .my-jobs .mj-card .mj-fields { flex-direction: column; }
+  .mj-top { flex-direction: column; }
+  .mj-top-actions { width: 100%; }
+}

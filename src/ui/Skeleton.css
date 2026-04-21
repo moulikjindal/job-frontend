@@ -1,0 +1,23 @@
+.ui-skeleton {
+  position: relative;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+.ui-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.10), transparent);
+  animation: ui-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+[data-theme="dark"] .ui-skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+}
+.ui-skeleton-group {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes ui-skeleton-shimmer {
+  100% { transform: translateX(100%); }
+}

@@ -1,0 +1,45 @@
+.ui-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-family: inherit;
+}
+.ui-chip:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.ui-chip--active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.ui-chip--active:hover {
+  color: #fff;
+}
+.ui-chip-icon {
+  font-size: 0.9rem;
+}
+.ui-chip-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  opacity: 0.7;
+  transition: all var(--transition);
+}
+.ui-chip-remove:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.25);
+}
+.ui-chip--removable { padding-right: 6px; }

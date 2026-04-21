@@ -1,0 +1,75 @@
+.companies {
+  padding: 80px 24px;
+  background: var(--surface);
+}
+.companies .comp-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.companies .comp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+.companies .comp-card {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all var(--transition);
+}
+.companies .comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-light);
+}
+.companies .comp-card .comp-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.companies .comp-card .comp-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+  background: rgba(79,70,229,0.08);
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  display: flex;
+}
+.companies .comp-card .comp-info p:first-child {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.companies .comp-card .comp-info p:last-child {
+  font-size: 0.85rem;
+  color: var(--gray-2);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.companies .comp-card .comp-positions {
+  padding: 10px;
+  text-align: center;
+  background: rgba(79,70,229,0.06);
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.companies .comp-card .comp-positions:hover {
+  background: var(--primary);
+  color: var(--always-white);
+}
+
+@media (max-width: 900px) { .companies .comp-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; } }

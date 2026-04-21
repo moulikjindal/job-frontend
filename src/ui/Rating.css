@@ -1,0 +1,17 @@
+.ui-rating {
+  display: inline-flex;
+  gap: 2px;
+}
+.ui-rating-star {
+  background: transparent;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #f59e0b;
+  font-size: 1rem;
+  transition: transform var(--transition);
+  display: inline-flex;
+}
+.ui-rating-star:hover:not(:disabled) { transform: scale(1.15); }
+.ui-rating-star:disabled { cursor: default; }
+.ui-rating--readonly .ui-rating-star { cursor: default; pointer-events: none; }
